@@ -38,8 +38,17 @@ SF_GRID = {
     'n_blobs': [2, 3, 4, 5],
     'init': ["default"],
 }
-```
 
+```
+# Installation
+
+```
+sudo apt update
+sudo apt install openmpi-bin openmpi-common libopenmpi-dev
+export CC=mpicc
+sudo apt install -y libfftw3-dev libfftw3-mpi-dev
+uv sync
+```
 
 # References
 
