@@ -9,6 +9,10 @@ Usage:
     python scripts/generate_lyapunov.py -ntot 10 -tid 0  # Worker 0 of 10
     python scripts/generate_lyapunov.py -ntot 10 -tid 1  # Worker 1 of 10
 """
+
+from dotenv import load_dotenv
+load_dotenv()
+
 import argparse
 from itertools import product
 from pathlib import Path

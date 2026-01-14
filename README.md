@@ -7,6 +7,16 @@ It relies heavily on the dedalus package https://dedalus-project.org/ [2].
 
 # Installation
 
+Conda:
+```
+eval "$(/home/krosenfeld/miniforge3/bin/conda shell.bash hook)"
+conda create -n dedalus3
+conda activate dedalus3
+conda env config vars set OMP_NUM_THREADS=1
+conda env config vars set NUMEXPR_MAX_THREADS=1
+conda install -c conda-forge dedalus
+```
+
 From a venv with python>=3.11.2 run the commands below to install the required packages
 ```bash
 python -m venv ~/venvs/thewell
