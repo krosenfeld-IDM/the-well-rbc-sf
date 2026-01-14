@@ -31,3 +31,4 @@ OUTPUT_PATH = Path(__file__).parents[1] / "output"
 # filenames
 filename_rbc = "rbc_{}x{}_rayleigh_{:.2e}_prandtl_{:.2e}_dT_{:.2e}_seed_{}"
 filename_sf = "sf_{}x{}_reynolds_{:.2e}_schmidt_{:.2e}_width_{:.2e}_nshear_{}_nblobs_{}"
+filename_sf_lyapunov = "sf_lyap_{}x{}_reynolds_{:.2e}_schmidt_{:.2e}_width_{:.2e}_nshear_{}_nblobs_{}"

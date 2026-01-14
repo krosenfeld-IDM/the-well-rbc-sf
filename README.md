@@ -40,6 +40,31 @@ SF_GRID = {
 }
 
 ```
+
+# Lyapunov Exponent Computation
+
+The repository also supports computing the Maximum Lyapunov Exponent (MLE) for shear flow simulations using tangent-space integration.
+
+```bash
+# Run with full parameter grid
+python scripts/generate_lyapunov.py --output-folder lyapunov_output
+
+# Quick test with reduced resolution (128x256) and short simulation
+python scripts/generate_lyapunov.py --test --stop-time 2.0 --output-folder test_lyapunov
+
+# Parallel execution across workers
+python scripts/generate_lyapunov.py -ntot 10 -tid 0  # Worker 0 of 10
+```
+
+Options:
+- `--stop-time`: Total simulation time (default: 20.0)
+- `--renorm-interval`: Time between perturbation renormalizations (default: 0.5)
+- `--perturbation-seed`: Random seed for perturbation initial conditions (default: 42)
+- `--test`: Use small test parameters (128x256 resolution, single parameter set)
+
+Output files:
+- `{name}_lyapunov.h5`: Contains MLE value, time series of running estimates, and metadata
+
 # Installation
 
 ```
