@@ -48,6 +48,7 @@ sudo apt install openmpi-bin openmpi-common libopenmpi-dev
 export CC=mpicc
 sudo apt install -y libfftw3-dev libfftw3-mpi-dev
 uv sync
+export UV_ENV_FILE="/home/krosenfeld/projects/the-well-rbc-sf/.env"
 ```
 
 # References
